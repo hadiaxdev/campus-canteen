@@ -1,0 +1,162 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f7f4;
+  color: #292524;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  margin-bottom: 22px;
+  font-size: 26px;
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.menu-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.menu-filters input,
+.menu-filters select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+}
+
+.menu-filters input {
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.item-card {
+  overflow: hidden;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.item-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item-info {
+  padding: 18px;
+}
+
+.item-category {
+  color: #a16207;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.item-info h3 {
+  margin-bottom: 10px;
+}
+
+.item-info p {
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.item-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.item-bottom strong {
+  color: #166534;
+  font-size: 18px;
+}
+
+.item-bottom button {
+  background: #fff1f2;
+  color: #be123c;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 13px;
+  font-size: 20px;
+}
+
+.details-button {
+  width: 100%;
+  padding: 11px;
+  color: white;
+  background: #166534;
+  border: none;
+  border-radius: 8px;
+}
+
+.details-button:hover {
+  background: #14532d;
+}
+
+@media (max-width: 800px) {
+  .menu-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  .menu-container {
+    margin: 15px auto;
+    padding: 12px;
+  }
+
+  .menu-list {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-filters {
+    flex-direction: column;
+  }
+
+  .item-card img {
+    height: 220px;
+  }
+}
